@@ -1,0 +1,38 @@
+name: Question
+description: Ask a usage or setup question
+labels:
+  - question
+body:
+  - type: input
+    id: app_name
+    attributes:
+      label: App name
+      description: Which app is your question about?
+      placeholder: kendama-mobile
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What do you want to know?
+      placeholder: Ask your question clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already tried
+      placeholder: Commands, docs, or steps you already checked.
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Device, OS, app version, etc.
+    validations:
+      required: false

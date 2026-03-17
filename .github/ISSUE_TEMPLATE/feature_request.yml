@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest an idea to improve an app
+labels:
+  - enhancement
+body:
+  - type: input
+    id: app_name
+    attributes:
+      label: App name
+      description: Which app should this apply to?
+      placeholder: deadline-app
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What problem are you facing?
+      placeholder: Explain the pain point.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen?
+      placeholder: Describe your proposed feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Any alternative ideas or workarounds.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      placeholder: Mockups, examples, or links.
+    validations:
+      required: false
