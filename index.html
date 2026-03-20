@@ -1,18 +1,159 @@
----
-layout: default
----
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masanori Matsuura | Profile</title>
+    <meta
+      name="description"
+      content="Masanori Matsuuraの自己紹介ページです。公開中アプリのプライバシーポリシーとサポート情報を掲載しています。"
+    />
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --line: #dbe5f2;
+        --accent: #0b6bcb;
+      }
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+      * {
+        box-sizing: border-box;
+      }
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        background:
+          radial-gradient(circle at 90% 0%, #d8ebff 0, transparent 42%),
+          linear-gradient(180deg, #eef5ff 0%, var(--bg) 32%, #eef2f7 100%);
+        color: var(--text);
+      }
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 24px 16px 56px;
+      }
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+      .hero {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 18px 48px rgba(11, 42, 84, 0.08);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(28px, 5vw, 42px);
+        letter-spacing: 0.02em;
+      }
+
+      .subtitle {
+        margin-top: 8px;
+        font-size: 17px;
+        color: var(--muted);
+      }
+
+      .description {
+        margin-top: 18px;
+        line-height: 1.9;
+      }
+
+      .cards {
+        display: grid;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .card {
+        display: block;
+        text-decoration: none;
+        background: #f7fbff;
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+
+      .card:hover {
+        border-color: #aacbf4;
+        background: #eff7ff;
+      }
+
+      .card-title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .card-text {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .links {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: var(--accent);
+        background: #fff;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .pill:hover {
+        background: #f0f7ff;
+      }
+
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Masanori Matsuura</h1>
+        <p class="subtitle">Web / Mobile App Developer</p>
+        <p class="description">
+          大阪を拠点に、React・React Native を中心に小規模サービスを開発しています。
+          このサイトは、自己紹介と公開中アプリの法務ページ配信のために運用しています。
+        </p>
+
+        <div class="cards">
+          <a class="card" href="/deadline-app/">
+            <div class="card-title">シンプルタスク（deadline-app）</div>
+            <div class="card-text">サポート / プライバシーポリシー / 利用規約</div>
+          </a>
+          <a class="card" href="/kendama-mobile/privacy-policy.html">
+            <div class="card-title">けん玉練習アプリ（kendama-mobile）</div>
+            <div class="card-text">プライバシーポリシー / 利用規約</div>
+          </a>
+        </div>
+
+        <div class="links">
+          <a class="pill" href="/deadline-app/privacy-policy.html">deadline-app Privacy</a>
+          <a class="pill" href="/deadline-app/terms-of-service.html">deadline-app Terms</a>
+          <a class="pill" href="/kendama-mobile/privacy-policy.html">kendama Privacy</a>
+          <a class="pill" href="/kendama-mobile/terms-of-service.html">kendama Terms</a>
+          <a class="pill" href="/app-ads.txt">app-ads.txt</a>
+        </div>
+
+        <footer>Contact: <a href="https://github.com/matsum0623" target="_blank" rel="noopener noreferrer">GitHub @matsum0623</a></footer>
+      </section>
+    </main>
+  </body>
+</html>
